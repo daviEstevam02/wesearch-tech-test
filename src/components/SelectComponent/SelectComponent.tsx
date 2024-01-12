@@ -1,8 +1,8 @@
 import { FieldError, FieldErrorsImpl, Merge } from "react-hook-form";
 import Select from "react-select";
-import { SelectComponentsProps } from "react-select/src/Select";
 import { Options } from "@/@types/types";
 import { Container, Label, customStyles } from "./styles";
+import { SelectComponentsProps } from "react-select/src/Select";
 
 interface SelectComponentProps extends SelectComponentsProps {
   label?: string;

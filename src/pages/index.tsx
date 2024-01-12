@@ -1,9 +1,9 @@
 import { SelectComponent } from "@/components/SelectComponent/SelectComponent";
 import { useCars } from "@/hooks/useCars"
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Container, Content, Header, SubTitle, Title, ButtonSection } from "../styles/home/styles"
 import { Controller, useForm } from "../../node_modules/react-hook-form";
-import { CarsFinalValue, CarsForm } from "@/@types/cars";
+import { CarsForm } from "@/@types/cars";
 import { TotalValueComponent } from "@/components/TotalValue/index";
 import Button from "@/components/Button/index";
 
