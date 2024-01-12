@@ -1,9 +1,6 @@
 import { FieldError, FieldErrorsImpl, Merge } from "react-hook-form";
-import Select, {
-  components as customComponents,
-} from "react-select";
+import Select from "react-select";
 import { SelectComponentsProps } from "react-select/src/Select";
-import { NoticeProps } from "react-select/src/components/Menu";
 import { Options } from "@/@types/types";
 import { Container, Label, customStyles } from "./styles";
 
@@ -37,20 +34,6 @@ export function SelectComponent({
     return null;
   }
 
-  const NoOptionsMessage = (
-    props: NoticeProps<
-      {
-        label: string;
-        value: string;
-      },
-      false
-    >,
-  ) => (
-    <customComponents.NoOptionsMessage {...props}>
-      Sem opções
-    </customComponents.NoOptionsMessage>
-  );
-
   return (
     <Container
       isDisabled={isReadOnly}
@@ -59,7 +42,7 @@ export function SelectComponent({
       <Select
         name={name}
         options={options}
-        components={{ NoOptionsMessage, ...components }}
+        components={{ ...components }}
         menuIsOpen={isReadOnly ? false : undefined}
         isClearable={!isReadOnly}
         isSearchable={!isReadOnly}
