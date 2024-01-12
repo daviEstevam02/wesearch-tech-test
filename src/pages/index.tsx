@@ -21,7 +21,8 @@ export default function Home() {
   const {
     watch,
     control,
-    handleSubmit
+    handleSubmit,
+    setValue
   } = useForm<CarsForm>({
     mode: "onChange",
     reValidateMode: "onChange",
@@ -42,12 +43,15 @@ export default function Home() {
   },[])
 
   useEffect(() => {
+    setValue("modelId", null!)
+
     if(watchBrandId?.value){
       getModels(Number(watchBrandId?.value))
     }
   },[watchBrandId])
 
   useEffect(() => {
+    setValue("yearId", null!)
     if(watchModelId?.value){
       getYears(Number(watchBrandId?.value), Number(watchModelId?.value))
     }

@@ -1,8 +1,8 @@
 import { Options } from "./types";
 
 export interface CarsData {
-    codigo: number;
-    nome: string
+    codigo?: number;
+    nome?: string
     modelos?: CarModelsData[]
 }
 

@@ -1,6 +1,6 @@
 import { CarsData, CarsFinalValue } from "@/@types/cars";
 import { Options } from "@/@types/types";
-import { getCarsBrand, getCarsModel, getCarsYear, getCarValue } from "@/services/car-services";
+import { getCarsBrand, getCarsModel, getCarsYear, getCarValue } from "../services/car-services";
 import { createContext, ReactNode, useEffect, useState } from "react";
 
 interface CarProviderProps {
