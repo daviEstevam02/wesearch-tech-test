@@ -1,7 +1,7 @@
 import styled, { css } from "../../../node_modules/styled-components";
 
 interface ContainerProps {
-  isDisabled: boolean
+  isDisabled?: boolean
 }
 import { Options } from "@/@types/types";
 import { StylesConfig } from "react-select";

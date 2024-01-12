@@ -1,6 +1,5 @@
 import { FieldError, FieldErrorsImpl, Merge } from "react-hook-form";
 import Select, {
-  GroupTypeBase,
   components as customComponents,
 } from "react-select";
 import { SelectComponentsProps } from "react-select/src/Select";
@@ -44,11 +43,7 @@ export function SelectComponent({
         label: string;
         value: string;
       },
-      false,
-      GroupTypeBase<{
-        label: string;
-        value: string;
-      }>
+      false
     >,
   ) => (
     <customComponents.NoOptionsMessage {...props}>
