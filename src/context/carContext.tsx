@@ -32,8 +32,8 @@ function CarsProvider({ children }: CarProviderProps) {
     setCarsBrandOptions(
       data.data.map((state) => ({
         ...state,
-        label: state.nome,
-        value: String(state.codigo),
+        label: state.nome!,
+        value: String(state.codigo!),
       })),
     );
   }
@@ -52,8 +52,8 @@ function CarsProvider({ children }: CarProviderProps) {
     setCarsModelOptions(
       data?.data?.modelos!.map((state) => ({
         ...state,
-        label: state.nome,
-        value: String(state.codigo),
+        label: state.nome!,
+        value: String(state.codigo!),
       })),
     );
   }
@@ -71,8 +71,8 @@ function CarsProvider({ children }: CarProviderProps) {
     setCarsYearOptions(
       data.data.map((state) => ({
         ...state,
-        label: state.nome,
-        value: String(state.codigo),
+        label: state.nome!,
+        value: String(state.codigo!),
       })),
     );
   }
