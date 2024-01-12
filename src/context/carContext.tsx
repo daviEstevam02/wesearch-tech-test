@@ -48,8 +48,9 @@ function CarsProvider({ children }: CarProviderProps) {
 
   async function tryGetModels(brandId: number) {
     const data = await getCarsModel(brandId);
+    console.log(data)
     setCarsModelOptions(
-      data.data?.modelos?.map((state) => ({
+      data?.data?.modelos!.map((state) => ({
         ...state,
         label: state.nome,
         value: String(state.codigo),

@@ -1,4 +1,4 @@
-import { CarsData, CarsFinalValue } from "@/@types/cars";
+import { CarModelsData, CarsData, CarsFinalValue } from "@/@types/cars";
 import { API } from "./api";
 
 export function getCarsBrand(){
@@ -7,7 +7,7 @@ export function getCarsBrand(){
 }
 
 export function getCarsModel(brandId: number){
-    const data = API.get<CarsData[]>(`/carros/marcas/${brandId}/modelos`)
+    const data = API.get<CarsData>(`/carros/marcas/${brandId}/modelos`)
     return data;
 }
 
