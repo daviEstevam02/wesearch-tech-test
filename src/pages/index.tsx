@@ -123,7 +123,7 @@ export default function Home() {
       </Content>
       {
       carsValue && (
-        <TotalValueComponent AnoModelo={carsValue.AnoModelo} Valor={carsValue.Valor} Marca={carsValue.Marca}/>
+        <TotalValueComponent AnoModelo={carsValue.AnoModelo} Valor={carsValue.Valor} Modelo={carsValue.Modelo}/>
       )
     }
     </Container>
